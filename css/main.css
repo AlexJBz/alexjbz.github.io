@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Mansalva|Open+Sans&display=swap');
 
+:root {
+    --purple: rgb(116, 5, 116);
+}
+
 * {
     margin:0;
     padding:0;
@@ -14,10 +18,9 @@ canvas {
 }
 
 #particles-js { 
-    position:absolute; 
-    width: 100%; 
-    height: 100%; 
-    background-color: rgb(116, 5, 116); 
+    width: 100vw; 
+    height: 100vh; 
+    background-color: var(--purple); 
     background-image: url(""); 
     background-repeat: no-repeat; 
     background-size: cover; 
@@ -25,16 +28,18 @@ canvas {
 } 
 
 header {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width:100%;
-    height:100%;
-    margin:auto;
+    position: absolute;
+    width:310px;
+    height:80px;
     text-align:center;
     position: absolute;
     color:white;   
     cursor: default;
+    left:50%;
+    top:50%;
+    margin-top:-40px;
+    margin-left: -155px;
+    pointer-events: none;
 }
 
 header h1 {
@@ -46,10 +51,35 @@ header h3 {
     font-family: 'Mansalva', sans-serif;
     transition: font-size 0.2s;
     transition-timing-function: ease-out;
+    pointer-events: all;
+    margin:auto;
+    width:130px;
 }
 
 header h3:hover {
     font-size:24px;
     text-decoration: underline;
     cursor: pointer;
+}
+
+.main {
+    width:90%;
+    margin:auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    text-align:center;
+    flex:25%;
+    background-color: var(--purple);
+    color:white;
+    margin:0px 4px 0px 4px;
+    border-radius:0px 0px 5px 5px;
+    cursor: pointer;
+    font-family: 'Mansalva', sans-serif;
+    padding:5px;
 }
